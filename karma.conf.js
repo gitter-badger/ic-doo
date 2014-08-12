@@ -9,6 +9,14 @@ module.exports = function(config) {
     // testing framework to use (jasmine/mocha/qunit/...)
     frameworks: ['jasmine'],
 
+    // Which plugins to enable
+    plugins: [
+      'karma-jasmine',
+      'karma-coverage',
+      'karma-phantomjs-launcher',
+      'karma-chrome-launcher'
+    ],
+
     // list of files / patterns to load in the browser
     files: [
       'client/bower_components/jquery/dist/jquery.js',
@@ -38,6 +46,7 @@ module.exports = function(config) {
       '**/*.jade': 'ng-jade2js',
       '**/*.html': 'html2js',
       '**/*.coffee': 'coffee',
+      'client/**/*.js': ['coverage']
     },
 
     ngHtml2JsPreprocessor: {
@@ -71,11 +80,24 @@ module.exports = function(config) {
     // - Safari (only Mac)
     // - PhantomJS
     // - IE (only Windows)
-    browsers: ['PhantomJS'],
+    browsers: ['Chrome'],
 
 
     // Continuous Integration mode
     // if true, it capture browsers, run tests and exit
-    singleRun: false
+    singleRun: false,
+    colors: true,
+
+    // coverage reporter generates the coverage
+    reporters: ['progress', 'coverage'],
+
+    // optionally, configure the reporter
+    coverageReporter: {
+      type : 'html',
+      dir : 'test/coverage/',
+      instrumenter: {
+        'client/**/*.js': 'istanbul' // Force the use of the Istanbul instrumenter to cover CoffeeScript files
+      }
+    }
   });
 };
