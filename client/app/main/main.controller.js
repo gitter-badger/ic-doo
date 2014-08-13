@@ -10,11 +10,20 @@ angular.module('icDooApp')
     });
 
     $scope.addThing = function() {
-      if($scope.newThing === '') {
+      if($scope.thing.name === '') {
         return;
       }
-      $http.post('/api/things', { name: $scope.newThing });
-      $scope.newThing = '';
+
+      $http.post('/api/things', $scope.thing);
+
+      /*
+
+      $http.post('/api/things', {
+        name: $scope.thing.name,
+        info: $scope.thing.info
+      });
+
+      */
     };
 
     $scope.deleteThing = function(thing) {

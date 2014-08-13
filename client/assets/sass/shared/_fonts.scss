@@ -1,0 +1,27 @@
+
+// handy loop using each for font-face declarations
+@each $font-face in 'apexnew-bold', 'apexnew-book', 'apexnew-bookitalic' {
+  @font-face {
+    font-family: $font-face;
+    font-style: normal;
+    font-weight: normal;
+    src: url('../../../fonts/#{$font-face}.eot');
+    src: url('../../../fonts/#{$font-face}.eot?') format('eot'),
+         url('../../../fonts/#{$font-face}.woff') format('woff'),
+         url('../../../fonts/#{$font-face}.ttf')  format('truetype');
+  }
+}
+
+
+// mixin for shortening font-face declarations
+// @mixin     font
+// @param     $font {String} font to be loaded
+// @param     $style {String} font-style
+// @param     $weight {String} font-weight
+// @usage:
+// =@mixin font($font, $style: normal, $weight: normal) {}
+@mixin font($font, $style: normal, $weight: normal) {
+  font-family: $font, Arial, sans-serif;
+  font-style:  $style;
+  font-weight: $weight;
+}

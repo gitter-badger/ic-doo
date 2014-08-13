@@ -14,7 +14,8 @@ module.exports = function(config) {
       'karma-jasmine',
       'karma-coverage',
       'karma-phantomjs-launcher',
-      'karma-chrome-launcher'
+      'karma-chrome-launcher',
+      'karma-ng-jade2js-preprocessor'
     ],
 
     // list of files / patterns to load in the browser

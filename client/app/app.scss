@@ -1,37 +1,48 @@
 
-$fa-font-path: "/bower_components/font-awesome/fonts";
+// font awesome ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 @import 'font-awesome/scss/font-awesome';
 
-/**
- * App-wide Styles
- */
 
-.browsehappy {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
-}
+// shared base ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-  .container {
-    max-width: 730px;
-  }
-}
+@import "../assets/sass/shared/variables";
+@import "../assets/sass/shared/mixins";
+@import "../assets/sass/shared/fonts";
 
-// Component styles are injected through grunt
+
+// zurb foundation ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+@import "foundation/settings";
+@import "normalize";
+@import "foundation";
+
+// zurb foundation ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+@import "../assets/sass/shared/layout";
+
+// component styles are injected through grunt ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 // injector
 @import 'account/login/login.scss';
 @import 'admin/admin.scss';
 @import 'main/main.scss';
 // endinjector
 
-// zurb foundation
-@import "foundation/settings";
-@import "normalize";
-@import "foundation";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Or selectively include components
 // @import

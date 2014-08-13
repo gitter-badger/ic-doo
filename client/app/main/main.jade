@@ -1,9 +1,10 @@
-div(ng-include='"components/navbar/navbar.html"')
+section#navbar
+  div.row(ng-include='"components/navbar/navbar.html"')
 
 header#banner.hero-unit
   .container
     h1 We are Infocentric
-    p.lead We will kick your ass. Like a boss!
+    p.lead Kicking your ass. Like a boss!
     img(src='assets/images/yeoman.png', alt='I\'m Yeoman')
 
 .container
@@ -19,7 +20,8 @@ header#banner.hero-unit
   form.thing-form
     label Syncs in realtime across clients
     p.input-group
-      input.form-control(type='text', placeholder='Add a new thing here.', ng-model='newThing')
+      input.form-control(type='text', placeholder='Name', ng-model='thing.name')
+      input.form-control(type='text', placeholder='Info', ng-model='thing.info')
       span.input-group-btn
         button.btn.btn-primary(type='submit', ng-click='addThing()') Add New
 

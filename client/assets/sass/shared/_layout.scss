@@ -1,0 +1,47 @@
+
+@media #{$small-up} {
+  #navbar {
+    background-color: $ic-darkgreen;
+    position: relative;
+    height: 150px;
+  }
+
+  .ic-logo {
+    background-image: url(../../../assets/images/iclogo-web.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 110px 95px;
+    position: absolute;
+    right: 0;
+    top: 28px;
+    display: block;
+    width: 110px;
+    height: 95px;
+  }
+}
+
+/*
+@media #{$medium-up} {
+  .layout.css.fooooo{
+    color: red;
+  }
+}
+
+@media #{$large-up} {
+  .layout.css.fooooo{
+    color: red;
+  }
+}
+
+@media #{$xlarge-up} {
+  .layout.css.fooooo{
+    color: red;
+  }
+}
+
+@media #{$xxlarge-up} {
+  .layout.css.fooooo{
+    color: red;
+  }
+}
+*/
