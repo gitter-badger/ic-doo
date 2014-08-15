@@ -1,15 +1,21 @@
 section#navbar
   div.row(ng-include='"components/navbar/navbar.html"')
 
-header#banner.hero-unit
-  .container
-    h1 We are Infocentric
-    p.lead Kicking your ass. Like a boss!
-    img(src='assets/images/yeoman.png', alt='I\'m Yeoman')
-
-.container
+header.welcome
   .row
-    .col-lg-12
+    .small-12.columns
+      .small-8.columns.small-offset-2
+        h1 Track your working time
+          br
+          | and monitor all results.
+        p.lead IC Doo makes it easy for you to log, track, and monitor your project related
+          br
+          | work time without reloading the page. Getting started only takes a few minutes.
+
+
+section.content
+  .row
+    .small-12.columns
       h1.page-header Features:
       ul.nav.nav-tabs.nav-stacked.col-md-4.col-lg-4.col-sm-6(ng-repeat='thing in awesomeThings')
         li
@@ -17,17 +23,18 @@ header#banner.hero-unit
             | {{thing.name}}
             button.close(type='button', ng-click='deleteThing(thing)') ×
 
-  form.thing-form
-    label Syncs in realtime across clients
-    p.input-group
-      input.form-control(type='text', placeholder='Name', ng-model='thing.name')
-      input.form-control(type='text', placeholder='Info', ng-model='thing.info')
-      span.input-group-btn
-        button.btn.btn-primary(type='submit', ng-click='addThing()') Add New
+      form.thing-form
+        label Syncs in realtime across clients
+        p.input-group
+          input.form-control(type='text', placeholder='Name', ng-model='thing.name')
+          input.form-control(type='text', placeholder='Info', ng-model='thing.info')
+          span.input-group-btn
+            button.btn.btn-primary(type='submit', ng-click='addThing()') Add New
 
 footer.footer
-  .container
-    p
-      a(href='https://twitter.com/tyhenkel') @tyhenkel
-      = ' | '
-      a(href='https://github.com/DaftMonk/generator-angular-fullstack/issues?state=open') Issues
+  .row
+    div.small-12.columns
+      p
+        a(href='https://twitter.com/tyhenkel') @tyhenkel
+        = ' | '
+        a(href='https://github.com/DaftMonk/generator-angular-fullstack/issues?state=open') Issues

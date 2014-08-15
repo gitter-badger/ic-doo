@@ -1,7 +1,9 @@
-div(ng-include='"components/navbar/navbar.html"')
-.container
+section#navbar
+  div.row(ng-include='"components/navbar/navbar.html"')
+
+section.content
   .row
-    .col-sm-12
+    .small-12.columns
       h1 Login
       p
         | Accounts are reset on server restart from
@@ -16,7 +18,7 @@ div(ng-include='"components/navbar/navbar.html"')
         | /
         code admin
 
-    .col-sm-12
+    .small-12.columns
       form.form(name='form', ng-submit='login(form)', novalidate='')
         .form-group
           label Email
