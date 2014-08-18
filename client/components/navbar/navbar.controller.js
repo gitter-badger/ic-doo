@@ -7,12 +7,24 @@ angular.module('icDooApp')
       'link': '/'
     },
     {
-      'title': 'test',
+      'title': 'Features',
+      'link': '/'
+    },
+    {
+      'title': 'Pricing',
+      'link': '/'
+    },
+    {
+      'title': 'Team',
+      'link': '/'
+    },
+    {
+      'title': 'Support',
       'link': '/'
     }
     ];
 
-    $scope.isCollapsed = true;
+    //$scope.isCollapsed = false;
     $scope.isLoggedIn = Auth.isLoggedIn;
     $scope.isAdmin = Auth.isAdmin;
     $scope.getCurrentUser = Auth.getCurrentUser;
