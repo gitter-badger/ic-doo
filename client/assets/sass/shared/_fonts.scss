@@ -1,6 +1,6 @@
 
 // handy loop using each for font-face declarations
-@each $font-face in 'apexnew-bold', 'apexnew-book', 'apexnew-bookitalic' {
+@each $font-face in 'foundation-icons', 'apexnew-bold', 'apexnew-book', 'apexnew-bookitalic' {
   @font-face {
     font-family: $font-face;
     font-style: normal;

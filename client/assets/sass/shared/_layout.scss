@@ -1,3 +1,19 @@
+// foundation overwrites
+
+.f-dropdown.drop-none:before,
+.f-dropdown.drop-none:after {
+  display: none !important;
+}
+
+
+.f-dropdown {
+  border: 1px solid #ccc;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  @include vendor-prefix('border-bottom-left-radius', '2px');
+  @include vendor-prefix('border-bottom-right-radius', '2px');
+  @include vendor-prefix('box-shadow', '0 3px 6px rgba(0,0,0,0.2)');
+}
 
 @media screen {
   html {
@@ -5,27 +21,27 @@
   }
 
   body {
-    font-size: 1rem;
+    font-size: 100%;
   }
 
-
   #navbar {
-    background-color: $ic-darkgreen;
+    background-color: $ic-darkgray;
     position: relative;
-    height: 50px;
+    height: 56px;
+    border-bottom: 1px solid rgba(#fff,.05);
   }
 
   .ic-logo {
     background-image: url('../../../assets/images/icdoo-logo.svg');
     background-repeat: no-repeat;
-    background-position: 0 0;
+    background-position: 0 11px;
     background-size: 70px;
     position: absolute;
-    left: 0;
-    top: 11px;
+    left: 14px;
+    top: 0;
     display: block;
     width: 70px;
-    height: 23px;
+    height: 55px;
   }
 
   .dark {
@@ -34,39 +50,53 @@
 
   .navbar {
     margin: 0;
+  }
 
-    &.navbar-right,
-    &.navbar-left {
+  .navbar-right,
+  .navbar-left {
+    display: block;
+
+    > li {
+      list-style-type: none;
+      float: left;
       display: block;
 
-      li {
-        list-style-type: none;
-        float: left;
-        display: block;
-
+      &.active {
         a {
-          float: left;
-          display: inline-block;
-          padding: 14px 15px;
-          color: rgba(255,255,255,.5);
-          @include vendor-prefix('transition','all .2s ease-in');
+          color: #fff;
+        }
+      }
+
+      > a {
+        float: left;
+        display: inline-block;
+        padding: 17px 15px;
+        color: rgba(255,255,255,.5);
+        position: relative;
+        @include vendor-prefix('transition','all .2s ease-in');
 
         &:hover {
           color: rgba(255,255,255,1);
-            @include vendor-prefix('transition','all .2s ease-out');
-          }
+          @include vendor-prefix('transition','all .2s ease-out');
+        }
+
+        i {
+          line-height: 100%;
+          margin-left: 10px;
+          top: 2px;
+          position: relative;
         }
       }
     }
+  }
 
-    &.navbar-left {
-      float: left;
-      margin-left: 120px;
-    }
+  .navbar-left {
+    float: left;
+    margin-left: 120px;
+  }
 
-    &.navbar-right {
-      float: right;
-    }
+  .navbar-right {
+    float: right;
   }
 
   .welcome {
@@ -75,7 +105,7 @@
     background-repeat: no-repeat;
     background-position: center;
     text-align: center;
-    padding: 130px 0;
+    padding: 100px 0;
 
     h1 {
       font-family: Lato, sans-serif;

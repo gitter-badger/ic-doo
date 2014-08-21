@@ -7,10 +7,15 @@ section#navbar(ng-include='"components/navbar/navbar.html"')
       form.form(name='form', ng-submit='register(form)', novalidate='')
         .form-group(ng-class='{ "has-success": form.name.$valid && submitted,\
         "has-error": form.name.$invalid && submitted }')
-          label Name
-          input.form-control(type='text', name='name', ng-model='user.name', required='')
-          p.help-block(ng-show='form.name.$error.required && submitted')
-            | A name is required
+          label Firstname
+          input.form-control(type='text', name='firstname', ng-model='user.firstname', required='')
+          p.help-block(ng-show='form.firstname.$error.required && submitted')
+            | A firstname is required
+
+          label Lastname
+          input.form-control(type='text', name='lastname', ng-model='user.lastname', required='')
+          p.help-block(ng-show='form.lastname.$error.required && submitted')
+            | A lastname is required
 
         .form-group(ng-class='{ "has-success": form.email.$valid && submitted,\
         "has-error": form.email.$invalid && submitted }')

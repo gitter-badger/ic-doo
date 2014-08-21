@@ -24,13 +24,15 @@ Thing.find({}).remove(function() {
 User.find({}).remove(function() {
   User.create({
     provider: 'local',
-    name: 'Test User',
-    email: 'test@test.com',
-    password: 'test'
+    firstname: 'Walid',
+    lastname: 'Ghazzo',
+    email: 'walidghazzo@gmail.com',
+    password: 'ss'
   }, {
     provider: 'local',
     role: 'admin',
-    name: 'Admin',
+    firstname: 'Admin',
+    lastname: 'Istrator',
     email: 'admin@admin.com',
     password: 'admin'
   }, function() {

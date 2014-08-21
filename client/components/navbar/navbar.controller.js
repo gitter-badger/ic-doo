@@ -8,19 +8,19 @@ angular.module('icDooApp')
     },
     {
       'title': 'Features',
-      'link': '/'
+      'link': '/features'
     },
     {
       'title': 'Pricing',
-      'link': '/'
+      'link': '/pricing'
     },
     {
       'title': 'Team',
-      'link': '/'
+      'link': '/team'
     },
     {
       'title': 'Support',
-      'link': '/'
+      'link': '/support'
     }
     ];
 
