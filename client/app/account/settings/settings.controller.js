@@ -2,6 +2,7 @@
 
 angular.module('icDooApp')
   .controller('SettingsCtrl', function ($scope, User, Auth) {
+    $scope.headline = 'Settings';
     $scope.errors = {};
 
     $scope.changePassword = function(form) {

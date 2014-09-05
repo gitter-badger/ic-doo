@@ -5,7 +5,6 @@
   display: none !important;
 }
 
-
 .f-dropdown {
   border: 1px solid #ccc;
   border-bottom-left-radius: 3px;
@@ -99,28 +98,36 @@
     float: right;
   }
 
-  .welcome {
-    background-image: url('../../../assets/images/bg-charts.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    text-align: center;
-    padding: 100px 0;
+  header {
 
     h1 {
       font-family: Lato, sans-serif;
       color: white;
       font-size: rem-calc(48);
       font-weight: 700;
-      text-shadow: 0 2px 5px rgba(0,0,0,.5);
+      text-shadow: 0 2px 5px rgba(0, 0, 0, .5);
     }
 
-    .lead {
-      font-size: 14px;
-      color: #eee;
-      margin: 20px 0;
+    &.headline {
+      padding: 30px 0;
+      background-color: $ic-headline-bg;
     }
 
+    &.welcome {
+      background-image: url('../../../assets/images/header-bg-iphone.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      text-align: center;
+      padding: 100px 0;
+
+      .lead {
+        font-size: 14px;
+        color: #eee;
+        margin: 20px 0;
+      }
+
+    }
   }
 
 
